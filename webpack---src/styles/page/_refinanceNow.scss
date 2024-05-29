@@ -1,0 +1,347 @@
+.wrapper.MainRefinanceNow {
+  .welcomeLifeInsurance {
+    ul.list-dot {
+      li {
+        font-size: pxToRem(27);
+        line-height: 1.4;
+        margin-bottom: 10px;
+        font-family: $fontLato;
+        font-weight: $regular;
+        font-weight: normal;
+        font-stretch: normal;
+        font-style: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #212121;
+        position: relative;
+
+        &::before {
+          content: "•";
+          margin-right: pxToRem(5);
+          font-size: pxToRem(18);
+        }
+
+        @media screen and (max-width: 640px) {
+          font-size: pxToRem(16);
+
+          &::before {
+            content: "•";
+            font-size: pxToRem(14);
+          }
+        }
+      }
+    }
+  }
+
+  .info-customer.MyHouse {
+    max-width: pxToRem(350);
+  }
+}
+
+
+.modalRefinance {
+  padding: 0 !important;
+
+  .modal-dialog {
+    max-width: 40rem;
+
+    .modal-content {
+      padding: 0 !important;
+      border-radius: 0.4rem;
+
+      .header-title {
+        border-top-right-radius: 0.4rem;
+        border-top-left-radius: 0.4rem;
+        padding: pxToRem(20);
+        background-color: #12132c;
+        font-family: "Roboto Slab";
+        font-weight: bold;
+        text-align: center;
+        font-size: pxToRem(22);
+        text-transform: uppercase;
+        color: #fff;
+
+        p {
+          color: #fff;
+          font-family: "Roboto Slab";
+          font-size: pxToRem(19);
+          font-weight: bold;
+          text-transform: initial;
+          line-height: 1.2;
+        }
+
+        @media screen and (max-width: 640px) {
+          font-size: pxToRem(18);
+          padding: pxToRem(15);
+
+          p {
+            font-size: pxToRem(15);
+          }
+        }
+      }
+
+      .modal-body {
+        padding: 0;
+      }
+
+      .content-box {
+        padding: pxToRem(20) pxToRem(20) pxToRem(40) pxToRem(20);
+        min-height: pxToRem(350);
+
+        .icon.check-phone {
+          z-index: 0 !important;
+        }
+
+        * {
+          font-family: "Roboto Slab" !important;
+        }
+
+        h2 {
+          font-weight: 600;
+          text-align: center;
+          font-size: pxToRem(26);
+          color: #001d30;
+          line-height: 1.4 !important;
+        }
+
+        h6 {
+          font-size: pxToRem(16);
+          font-weight: 600;
+          color: #212121;
+          margin-bottom: pxToRem(10);
+        }
+
+        h1 {
+          font-size: pxToRem(28);
+          font-weight: 600;
+          color: #212121;
+          margin-bottom: pxToRem(25);
+        }
+
+        p {
+          color: #001d30;
+          font-weight: 500;
+          line-height: 1.4;
+        }
+
+        .btnPrimary {
+          background-color: #12132c;
+          border-color: #12132c;
+          font-weight: 500;
+          font-size: pxToRem(18);
+          width: auto;
+          padding-left: pxToRem(30);
+          padding-right: pxToRem(30);
+          font-family: 'Poppins', sans-serif !important;
+          line-height: 1.4;
+        }
+
+        .button-light {
+          color: #212121;
+          font-family: 'Poppins', sans-serif !important;
+          margin-top: pxToRem(25);
+          font-weight: 600;
+          padding-bottom: pxToRem(5);
+          text-transform: uppercase;
+          font-size: pxToRem(12);
+          text-decoration: underline;
+          cursor: pointer;
+        }
+
+        .input__box .input__label,
+        .text-error p,
+        .checkbox-button .checkbox .checkbox__label span {
+          font-family: 'Poppins', sans-serif !important;
+          font-weight: 500;
+        }
+
+        .wProgress {
+          max-width: 500px;
+          margin: pxToRem(20) auto pxToRem(40) auto;
+
+          .progressbar {
+            .progressbar__title {
+              margin-bottom: pxToRem(6) !important;
+              color: #000000;
+              font-size: pxToRem(22);
+            }
+
+            .progress {
+              height: pxToRem(10);
+              border: #a5dbff 0.1px solid;
+              border-radius: pxToRem(6);
+
+
+              .progress-bar {
+                border-radius: pxToRem(6);
+              }
+            }
+          }
+        }
+
+        &.content-loading {
+          display: flex;
+          height: 100%;
+          justify-content: center;
+          align-items: center;
+          margin-top: pxToRem(-20);
+
+          .loading-wrap img {
+            width: pxToRem(80);
+            height: pxToRem(80);
+            margin-bottom: pxToRem(10);
+          }
+        }
+
+        @media screen and (max-width: 640px) {
+          padding: pxToRem(20) pxToRem(10) pxToRem(30) pxToRem(10);
+          min-height: pxToRem(250);
+
+          h2 {
+            font-size: pxToRem(20);
+          }
+
+          h6 {
+            font-size: pxToRem(14);
+          }
+
+          h1 {
+            font-size: pxToRem(22);
+          }
+
+          .text-error {
+            p {
+              font-size: pxToRem(12) !important;
+            }
+          }
+
+          .checkbox-button {
+            padding-left: pxToRem(8);
+          }
+
+          .checkbox .checkbox__label {
+
+            padding-left: 1.6rem;
+
+            span {
+              font-size: 0.9rem;
+              white-space: nowrap;
+            }
+          }
+
+          .bankProviders {
+            .input__box .input__label {
+              letter-spacing: pxToRem(-1.1);
+            }
+          }
+
+          .wProgress {
+            margin: pxToRem(10) auto pxToRem(20) auto;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mb-3rem {
+  margin-bottom: 3rem !important;
+}
+
+.list-style-none {
+  list-style-type: none;
+
+  li {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.max-600 {
+  max-width: pxToRem(600) !important;
+}
+
+.footer-absolute {
+  &.footer.footer-life-insurance {
+    position: relative;
+
+    @media screen and (min-width: 1600px) {
+      margin-top: 30%;
+    }
+
+    margin-top: 15%;
+  }
+}
+
+.text-align-last-left {
+  text-align-last: left !important;
+}
+
+
+.fade-in-text {
+  animation: fadeIn linear 1s;
+  -webkit-animation: fadeIn linear 1s;
+  -moz-animation: fadeIn linear 1s;
+  -o-animation: fadeIn linear 1s;
+  -ms-animation: fadeIn linear 1s;
+}
+
+.opacity-0 {
+  opacity: 0;
+  transition: all 0.3s;
+
+  &.h-0 {
+    height: 0;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

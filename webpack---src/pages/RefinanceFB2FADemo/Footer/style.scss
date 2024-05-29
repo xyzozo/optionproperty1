@@ -1,0 +1,36 @@
+footer.footer {
+    background-color: #ffeded;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    .container {
+        max-width: 1330px !important;
+    }
+    .logo-trush {
+        padding-bottom: 20px;
+        max-width: 33.33%;
+        img {
+            max-width: 100%;
+            max-height: 100px;
+        }
+    }
+    .nav {
+        font-size: 15px;
+        padding-bottom: 20px;
+        a {
+            color: #ec4c49;
+            font-weight: 700;
+            font-size: 18px;
+            &:hover {
+                color: #000000;
+            }
+        }
+    }
+    .info {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: #212121;
+        text-align-last: center;
+        opacity: 0.5;
+    }
+}

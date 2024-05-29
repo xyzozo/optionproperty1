@@ -1,0 +1,408 @@
+.cstm-australia {
+  margin-bottom: pxToRem(50);
+  margin-top: pxToRem(20);
+
+  @include max-screen($screen-sm) {
+    margin-bottom: pxToRem(40);
+  }
+
+  .listTopProperty {
+    &__item {
+      margin-bottom: 30px;
+      overflow: hidden;
+
+      .listTopProperty__img {
+        cursor: pointer;
+        height: 155px;
+        background-position: bottom;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color: #2e9fe9;
+        border-radius: 4px;
+        box-shadow: 1px 1px 2px #2e9fe9;
+        position: relative;
+        overflow: hidden;
+        visibility: visible;
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+      }
+    }
+
+    &__content {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 4px;
+
+      &.active,
+      &:hover {
+        &::before {
+          opacity: 1;
+          background: linear-gradient(180deg, transparent, #2e9fe9);
+        }
+
+        .listTopProperty__img {
+          transform: scale(1.5);
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 50%;
+        opacity: 0.78;
+        background: linear-gradient(180deg, transparent, #111);
+        z-index: 1;
+        border-radius: 4px;
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+        visibility: visible
+      }
+
+      .listTopProperty__name {
+        padding: pxToRem(8) pxToRem(10);
+        font-size: pxToRem(18);
+        color: #ffffff;
+        line-height: 1.2;
+        visibility: visible;
+        bottom: 0;
+        z-index: 1;
+        position: absolute;
+        text-shadow: 0.2px 0.5px #00101a;
+        left: 0;
+        font-weight: 600;
+        -webkit-transition: all 0.3s ease-out;
+        -moz-transition: all 0.3s ease-out;
+        -o-transition: all 0.3s ease-out;
+        transition: all 0.3s ease-out;
+      }
+    }
+
+    @media screen and (max-width: 640px) {
+      .listTopProperty__item {
+        margin-bottom: 10px;
+        padding: 0 5px;
+
+        .listTopProperty__img {
+          height: 100px;
+        }
+
+        .listTopProperty__name {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+
+.MainSolar.property {
+  footer.footer-life-insurance {
+    position: relative !important;
+    bottom: 0;
+  }
+
+  .progressBar-page {
+    .info-customer {
+      max-width: pxToRem(710);
+
+      &.w-600 {
+        max-width: pxToRem(600);
+      }
+    }
+  }
+
+
+  .progressBar-group {
+    .label {
+      white-space: nowrap;
+      margin-right: 20px;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .progressBar-group {
+      padding-right: 2rem;
+
+      .label {
+        white-space: normal;
+        margin-right: 0;
+        line-height: 1.4;
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .equityPriceMyHome {
+    input.input-change {
+      cursor: pointer;
+    }
+
+    .icon.check-phone {
+      z-index: -1;
+    }
+
+    .input__label {
+      font-size: pxToRem(13);
+      top: pxToRem(8);
+    }
+  }
+
+  p.font-18 {
+    font-size: pxToRem(18) !important;
+
+    @media screen and (max-width: 640px) {
+      font-size: pxToRem(14) !important;
+    }
+  }
+
+  .footer.footer-life-insurance {
+    display: block !important;
+
+    .container {
+
+      @include min-screen($width-site) {
+        max-width: pxToRem(1100);
+      }
+
+      @include max-screen($width-site) {
+        margin-top: 10%;
+      }
+    }
+  }
+}
+
+//************************
+// find
+//************************
+.cstm-find {
+  margin-bottom: pxToRem(60);
+
+  .innerCt {
+    max-width: 1100px;
+    margin: 0 auto;
+
+    &__tile {
+      text-align: center;
+      font-size: pxToRem(26);
+      font-weight: normal;
+      margin-bottom: pxToRem(25);
+      color: $cl-text;
+
+      @include max-screen($screen-xs) {
+        font-size: pxToRem(20);
+      }
+    }
+  }
+
+  .findList {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__item {
+      @include max-screen($screen-sm) {
+        flex: 0 0 100% !important;
+        max-width: 100% !important;
+        margin-bottom: pxToRem(35);
+      }
+
+      .findCt {
+        background: $cl-white;
+        padding: pxToRem(15);
+        text-align: center;
+        height: 100%;
+
+        @include max-screen($screen-tb) {
+          padding: 0 pxToRem(15);
+          height: 100%;
+        }
+
+        &__icon {
+          margin-bottom: pxToRem(20);
+
+          img {
+            width: pxToRem(80);
+          }
+
+          @include max-screen($screen-md) {
+            text-align: center;
+            margin-bottom: pxToRem(10);
+
+            img {
+              width: pxToRem(60);
+            }
+          }
+
+          @include max-screen($screen-xs) {
+            margin-bottom: pxToRem(8);
+          }
+        }
+
+        &__title {
+          font-weight: 600;
+          margin-bottom: pxToRem(8);
+          font-size: pxToRem(18);
+          color: $cl-primary;
+        }
+
+        &__sub {
+          font-size: pxToRem(15);
+        }
+      }
+    }
+  }
+}
+
+.life-insurance.MainSolar.property {
+  .group-rating {
+    max-width: 300;
+    margin-right: auto;
+    margin-left: auto;
+
+    .group-img-star {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 30px;
+        height: 30px;
+        margin: 8px;
+      }
+    }
+
+    .number {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 500;
+      color: #000000;
+      letter-spacing: -0.3px;
+    }
+
+    .text {
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      opacity: 0.5;
+      line-height: 1;
+      letter-spacing: -0.3px;
+    }
+  }
+}
+
+.bg-quotes {
+  margin: 30px 0;
+  background-color: #f6fbff;
+
+  .text-center {
+    align-self: center;
+  }
+
+  .col-md-8 {
+    align-self: center;
+  }
+
+  .content-quotes {
+    padding: pxToRem(30);
+    text-align: center;
+
+    @include max-screen($screen-tb) {
+      padding: pxToRem(35) 0;
+    }
+
+    .desc {
+      font-size: 12px;
+      line-height: 20px;
+      color: #212121;
+      text-align: center;
+      letter-spacing: -0.5px;
+      font-weight: 500;
+    }
+
+    .group-img-star {
+      margin-top: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img {
+        width: 15px;
+        height: 15px;
+        margin: 5px;
+      }
+    }
+
+    .text-author {
+      font-size: 14px;
+      line-height: 20px;
+      color: #000000;
+      font-weight: 500;
+    }
+  }
+
+  @include max-screen($screen-md) {
+    margin-top: 170px;
+
+    .flex-column-reverse-mobile {
+      flex-direction: column-reverse !important;
+    }
+
+    div.image-author {
+      margin-top: -130px;
+    }
+  }
+
+  .image-author {
+    max-width: 325px;
+    height: 325px;
+    display: flex;
+    position: relative;
+    border-radius: 50%;
+    margin-top: -30px;
+    margin-bottom: -30px;
+
+    @include max-screen($screen-tb) {
+      height: 300px;
+    }
+
+    img {
+      border-radius: 50%;
+      border: 6px solid #fff;
+      background-color: #fff;
+      box-shadow: 4px 3px 8px #ccc;
+    }
+
+    @include max-screen($screen-md) {
+      text-align: center;
+      margin: auto;
+      width: 250px;
+      height: 250px;
+
+      img {
+        margin: auto;
+        width: 238px;
+        height: 238px;
+      }
+    }
+  }
+}
+
+.sub-small {
+  color: #12122d;
+  font-style: italic;
+  font-weight: 600 !important;
+  font-size: 16px !important;
+}
+
+.text-transform-capitalize {
+  text-transform: capitalize !important;
+}
+
+.max-450 {
+  max-width: 450px !important;
+}

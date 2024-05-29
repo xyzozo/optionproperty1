@@ -1,0 +1,637 @@
+// ----------------------------------------------------------------------
+// wrapper
+// ----------------------------------------------------------------------
+.wrapper {
+    .bgTop {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+// ----------------------------------------------------------------------
+// header
+// ----------------------------------------------------------------------
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+
+    @include max-screen($screen-sm) {
+        padding: 3rem 0;
+    }
+}
+
+// ----------------------------------------------------------------------
+// Main
+// ----------------------------------------------------------------------
+.MainCt {
+    padding: 7rem 0;
+    height: 100vh;
+    position: relative;
+
+    @include max-screen($screen-md) {
+        padding: 5rem 0;
+        height: auto;
+    }
+
+    @include max-screen($screen-sm) {
+        padding: 3rem 0;
+    }
+
+    .welcomeSection {
+        .head-h2 {
+            margin-bottom: 5rem;
+
+            @include max-screen($screen-sm) {
+                margin-bottom: 3rem;
+            }
+        }
+
+        .head-h3 {
+            margin-bottom: 2rem;
+        }
+
+        .partnerBox {
+            margin-top: 11rem;
+
+            @include max-screen($screen-md) {
+                margin-top: 7rem;
+            }
+
+            @include max-screen($screen-sm) {
+                margin-top: 5rem;
+            }
+        }
+    }
+
+    .lsPartner {
+        @include flexbox();
+        @include flex-wrap(wrap);
+        @include align-items(center);
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+
+        @include max-screen($screen-sm) {
+            @include justify-content(center);
+        }
+
+        &__item {
+            width: calc(100% / 5);
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+            max-height: 60px;
+
+            @include max-screen($screen-sm) {
+                width: calc(100% / 3);
+                margin-bottom: 2rem;
+            }
+
+            a {
+                @include flexbox();
+                @include align-items(center);
+            }
+        }
+    }
+}
+
+// ----------------------------------------------------------------------
+// Form
+// ----------------------------------------------------------------------
+.formContent {
+    .container {
+        max-width: 500px;
+    }
+
+    .wForm {
+        position: relative;
+        width: 100%;
+        min-height: 250px;
+
+        .btnPrimary {
+            width: 100%;
+            min-width: 100%;
+        }
+
+        .form-control {
+            max-width: 470px;
+            margin: 0 auto;
+        }
+    }
+
+    .copyright {
+        color: $primary;
+        @include font-size(12);
+        margin-top: 3rem;
+        font-weight: 500;
+
+        @include max-screen($screen-xs) {
+            @include font-size(11);
+
+            br {
+                display: none;
+            }
+        }
+    }
+}
+
+// ----------------------------------------------------------------------
+// Footer
+// ----------------------------------------------------------------------
+footer {
+    padding: 5rem 0;
+    background-color: #f1f1f1;
+
+    @include max-screen($screen-xs) {
+        padding: 3rem 0;
+    }
+
+    .navFooter {
+        @include flexbox();
+        @include align-items(center);
+        @include flex-wrap(wrap);
+        margin-bottom: 2rem;
+        margin-left: -1.5rem;
+        margin-right: -1.5rem;
+
+        @include max-screen($screen-xs) {
+            margin-left: -0.5rem;
+            margin-right: -0.5rem;
+        }
+
+        &__item {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
+
+            @include max-screen($screen-xs) {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+                margin-bottom: 1rem;
+            }
+
+            a {
+                @include font-size(12);
+                font-weight: 500;
+                color: $primary;
+            }
+        }
+    }
+
+    .desc {
+        @include font-size(10);
+        font-weight: 400;
+        color: $primary;
+        line-height: 2rem;
+    }
+}
+
+// ----------------------------------------------------------------------
+// confidential
+// ----------------------------------------------------------------------
+.confidential {
+    margin-top: 2.5rem;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    @include max-screen($screen-xs) {
+        margin-top: 1.5rem;
+    }
+
+    &__img {
+        margin-bottom: 1rem;
+    }
+
+    &__text {
+        @include font-size(10);
+        font-weight: 700;
+        color: $primary;
+        margin-left: 0.5rem;
+        font-family: $default-font;
+    }
+}
+
+// ----------------------------------------------------------------------
+// Thank
+// ----------------------------------------------------------------------
+.refinanceThank {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    &__title {
+        color: $primary;
+        @include font-size(32);
+        font-weight: 600;
+    }
+
+    &__desc {
+        color: $primary;
+        @include font-size(22);
+        font-weight: 500;
+        margin-top: 2rem;
+    }
+}
+
+// ----------------------------------------------------------------------
+// List check
+// ----------------------------------------------------------------------
+.listCheck {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 3.5rem;
+
+    @include max-screen($screen-xs) {
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .icon-icon-checked-2 {
+        @include font-size(20);
+
+        @include max-screen($screen-sm) {
+            @include font-size(13);
+        }
+    }
+
+    .text {
+        padding-left: 1.5rem;
+        color: $primary;
+        @include font-size(21);
+        font-weight: 600;
+
+        @include max-screen($screen-sm) {
+            @include font-size(18);
+        }
+    }
+}
+
+.from-refinance.life-insurance {
+
+    .formContent-step-four .info-customer {
+        max-width: 30rem;
+
+        .birth-label {
+            @media screen and (min-width:768px) {
+                min-width: 45%;
+                justify-content: center;
+            }
+        }
+    }
+
+    .welcomeLifeInsurance h1 {
+        @media screen and (min-width:992px) {
+            font-size: pxToRem(36);
+        }
+    }
+
+    .covid19 {
+        font-size: pxToRem(16);
+        padding: pxToRem(5);
+        &.style-2 {
+            padding: pxToRem(10) pxToRem(20);
+						max-width: pxToRem(220);
+        }
+        @media screen and (max-width:767px) {
+            font-size: pxToRem(14);
+        }
+    }
+
+    .btn-group-gender {
+        &.style2 {
+            .btn-box {
+                width: pxToRem(170);
+                height: pxToRem(170);
+                background-color: #f8f8f8;
+                border-color: #b6e2ff;
+
+                &:hover,
+                &.active,
+                &:focus {
+                    background-color: #f2faff;
+
+                    p {
+                        color: #2e9fe9;
+                        font-weight: 700;
+                    }
+                }
+
+                p {
+                    font-family: $fontLato;
+                    line-height: 1.2;
+                    margin-top: pxToRem(6);
+                }
+            }
+
+            @media screen and (max-width:767px) {
+
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+
+                .btn-box {
+                    -webkit-box-flex: 0;
+                    -ms-flex: 0 0 46%;
+                    flex: 0 0 46%;
+                    max-width: 46%;
+                    margin: pxToRem(10) pxToRem(5) !important;
+                }
+            }
+        }
+
+        .btn-box {
+            border-radius: 20px;
+            border: 2px solid #2e9fe9;
+
+            p {
+                font-size: pxToRem(18);
+                margin-top: pxToRem(15);
+                font-weight: 500;
+                text-transform: inherit;
+                transition: all 0.3s;
+            }
+        }
+    }
+}
+
+.from-refinance.life-insurance,
+.MainRefinanceNow.life-insurance {
+    h2 {
+
+        @media screen and (min-width:767px) {
+            white-space: pre-line;
+        }
+    }
+
+    .info-customer {
+
+        .wForm-input {
+            @media screen and (max-width:767px) {
+                padding: 0 0.4375rem !important;
+            }
+        }
+
+        .input__box {
+            .input__label {
+                font-weight: 500;
+            }
+
+            input,
+            textarea {
+                border-radius: 2px;
+            }
+        }
+
+        .checkbox-button {
+            border-radius: 2px;
+
+            .checkbox__label {
+                text-align: center;
+                padding-left: pxToRem(30);
+                display: block;
+            }
+
+            @media screen and (max-width:767px) {
+                padding: 0.625rem 0.4rem;
+
+                .checkbox__label {
+                    span {
+                        font-size: 0.85rem;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media screen and (max-width:767px) {
+    .health-insurance.from-refinance.life-insurance .info-customer {
+        .wForm-input {
+            padding: 0 0.4375rem !important;
+        }
+    }
+
+    .server-policy.info-customer p {
+        text-align: center !important;
+        letter-spacing: normal !important;
+    }
+
+    .mobile-left {
+        .input-change {
+            padding-left: 1.5rem !important;
+
+        }
+
+        .input__label {
+            left: 1rem !important;
+        }
+    }
+}
+
+.max-800 {
+    max-width: pxToRem(800) !important;
+}
+
+.wrap-great {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: 600px) {
+        display: block;
+
+        .box-great {
+            width: 200px !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+    }
+
+    .box-great {
+        box-shadow: 0px 10px 40px -10px rgb(46 159 233 / 36%);
+        background-color: #fff;
+        border-radius: pxToRem(20);
+        padding: pxToRem(20) pxToRem(15);
+        border: pxToRem(2) solid #2e9fe9;
+        cursor: pointer;
+        -webkit-transition: transform 0.5s ease;
+        transition: transform 0.5s ease;
+        text-align: center;
+        width: 100%;
+        margin: 10px 0;
+        margin-right: pxToRem(40);
+
+        .text-great {
+            white-space: pre-line;
+        }
+
+        &:hover {
+            transform: scale(1.02);
+            -webkit-transform: scale(1.02);
+        }
+
+        &.active {
+            background-color: #2e9fe9;
+
+            .price {
+                color: #fff;
+            }
+
+            .text-great {
+                color: #fff;
+            }
+        }
+
+        .price {
+            font-size: pxToRem(40);
+            font-weight: 900;
+            font-family: $fontLato;
+            color: #2e9fe9;
+            margin-bottom: pxToRem(10);
+        }
+
+        .text-great {
+            font-size: pxToRem(16);
+            font-weight: 700;
+            font-family: $fontLato;
+        }
+
+        @media screen and (max-width: 480px) {
+            padding: pxToRem(10) pxToRem(15);
+            margin-right: pxToRem(15);
+
+            .price {
+                font-size: pxToRem(30);
+                margin-bottom: pxToRem(6);
+            }
+
+            .text-great {
+                font-size: pxToRem(12);
+            }
+        }
+
+        @media screen and (max-width: 360px) {
+            padding: pxToRem(10) pxToRem(15);
+            margin-right: pxToRem(10);
+
+            .price {
+                font-size: pxToRem(25);
+            }
+
+            .text-great {
+                font-size: pxToRem(11);
+            }
+        }
+    }
+}
+
+
+
+$circle-size: 142px;
+$circle-background: #D9D9D9;
+$circle-color: #2e9fe9;
+$inset-size: 135px;
+$inset-color: #fbfbfb;
+$transition-length: 2.5s;
+
+.ko-progress-circle {
+    margin: auto;
+    width: $circle-size;
+    height: $circle-size;
+
+    background-color: $circle-background;
+    border-radius: 50%;
+
+    .ko-progress-circle__slice,
+    .ko-progress-circle__fill {
+        width: $circle-size;
+        height: $circle-size;
+        position: absolute;
+        -webkit-backface-visibility: hidden;
+        transition: transform $transition-length;
+        border-radius: 50%;
+    }
+
+    .ko-progress-circle__slice {
+        clip: rect(0px, $circle-size, $circle-size, $circle-size/2);
+
+        .ko-progress-circle__fill {
+            clip: rect(0px, $circle-size/2, $circle-size, 0px);
+            background-color: $circle-color;
+        }
+    }
+
+    .ko-progress-circle__overlay {
+        width: $inset-size;
+        height: $inset-size;
+        position: absolute;
+        margin-left: ($circle-size - $inset-size)/2;
+        margin-top: ($circle-size - $inset-size)/2;
+
+        background-color: #ffffff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        span {
+            font-size: pxToRem(25);
+            font-weight: 600;
+            color: #212121;
+            font-family: $fontRobotoSlab;
+        }
+    }
+
+    $i: 0;
+    $increment: 180deg / 100;
+
+    @while $i <=100 {
+        &[data-progress='#{$i}'] {
+
+            .ko-progress-circle__slice.full,
+            .ko-progress-circle__fill {
+                transform: rotate($increment * $i);
+            }
+
+            .ko-progress-circle__fill.ko-progress-circle__bar {
+                transform: rotate($increment * $i * 2);
+            }
+
+            $i: $i+1;
+        }
+    }
+}
+
+.text-capitalize {
+    .checkbox-button .checkbox .checkbox__label {
+        text-align: left !important;
+        padding-left: 2.5rem !important;
+
+        span {
+            text-transform: capitalize;
+        }
+    }
+}
+
+.w-350.btnPrimary.life {
+    @media screen and (min-width:768px) {
+        min-width: pxToRem(350) !important;
+    }
+}
